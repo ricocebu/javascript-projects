@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <section class="tip-calculator">
+    <h1>Tip Calculator</h1>
+    <form action="/submit-data" method="POST">
+      <label for="bill-amount">Bill Amount:</label>
+      <input type="number" id="number" name="number" placeholder="₱1000">
+    </form>
+    <br>
+    <span>Select Tip option: </span>
+    <button id="first-tip">10%</button>
+    <button id="second-tip">20%</button>
+    <button id="third-tip">30%</button> 
+    <br><br>
+    <span id="message">Total Bill: </span>
+    <span id="total-bill"></span>
+  </section>
+  
+</body>
+</html>
