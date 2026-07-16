@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal/Popup Toggler</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  
+  <section class="myModal">
+    <div id="modalContents">
+      <div>
+        <h2 class="title">This Is The Modal Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, vel veritatis laboriosam voluptate, nesciunt, ipsa est minima quae quis velit ad numquam dolor vero. Facere quos deserunt similique modi dolorem?</p>
+      </div>
+      <div class="closeButton">
+        <button id="closeButton" onclick="buttonToggle()">Close</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="clickButton">
+    <button id="button" onclick="buttonToggle()">Show Modal</button>
+  </div>
+  
+</body>
+</html>
