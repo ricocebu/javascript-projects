@@ -19,39 +19,15 @@ document.querySelector('.previous').addEventListener("click", () => {
   container.src = imageArray[currentIndex];
 })
 
-const dot1 = document.createElement("span");
-dot1.innerHTML = "\u2022";
-document.querySelector("#dots").appendChild(dot1);
-
-const dot2 = document.createElement("span");
-dot2.innerHTML = "\u2022";
-document.querySelector("#dots").appendChild(dot2);
-
-const dot3 = document.createElement("span");
-dot3.innerHTML = "\u2022";
-document.querySelector("#dots").appendChild(dot3);
-
-const dot4 = document.createElement("span");
-dot4.innerHTML = "\u2022";
-document.querySelector("#dots").appendChild(dot4);
+for (let i = 0; i < imageArray.length; i++) {
+  const dot = document.createElement("span")
+  dot.innerHTML = "\u2022";
+  document.querySelector("#dots").appendChild(dot);
+  dot.addEventListener("click", () => {
+    currentIndex = i;
+    container.src = imageArray[i]
+  })
+}
 
 const dots = document.querySelector('#dots').classList;
 dots.add('dot-style');
-
-if (dot1) {
-  document.querySelector('#dots').addEventListener("click", () => {
-    container.src = imageArray[0];
-  })
-} else if (dot2) {
-  document.querySelector('#dots').addEventListener("click", () => {
-    container.src = imageArray[1];
-  })
-} else if (dot3) {
-  document.querySelector('#dots').addEventListener("click", () => {
-    container.src = imageArray[2];
-  })
-} else if (dot4) {
-  document.querySelector('#dots').addEventListener("click", () => {
-    container.src = imageArray[3];
-  })
-}
