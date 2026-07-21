@@ -6,9 +6,15 @@ const imageArray = [
 ];
 
 const container = document.querySelector('#image-container');
+let currentIndex = 0;
+document.querySelector('#image-container').src = imageArray[currentIndex]
 
-for (let i = 0; i < imageArray.length; i++){
-  const img = document.createElement('img');
-  img.src = imageArray[i];
-  container.appendChild(img);
-}
+document.querySelector('.next').addEventListener("click", () => {
+  currentIndex = (currentIndex + 1) % imageArray.length;
+  container.src = imageArray[currentIndex];
+})
+
+document.querySelector('.previous').addEventListener("click", () => {
+  currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+  container.src = imageArray[currentIndex];
+})
