@@ -21,3 +21,10 @@ img {
   display: inline;
   margin: 8px;
 }
+
+.dot-style {
+  content: "\2022";
+  color: #ff5733;
+  font-size: 1.5em;
+  cursor: pointer;
+}
