@@ -28,3 +28,10 @@ img {
   font-size: 1.5em;
   cursor: pointer;
 }
+
+.dot-style-active {
+  content: "\2022";
+  color: #f8886f;
+  font-size: 2em;
+  cursor: pointer;
+}
