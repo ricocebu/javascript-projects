@@ -5,13 +5,13 @@ const imageArray = [
   "images/cha-hae-in.jpg"
 ];
 
-setInterval(autoPlay, 3000);
-
 
 const container = document.querySelector('#image-container');
 const dots = document.querySelector('#dots').classList;
 let currentIndex = 0;
 document.querySelector('#image-container').src = imageArray[currentIndex]
+let autoPlayInterval = setInterval(autoPlay, 3000);
+
 
 document.querySelector('.next').addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % imageArray.length;
@@ -36,6 +36,8 @@ for (let i = 0; i < imageArray.length; i++) {
   })
 }
 
+updateDots();
+
 function updateDots() {
   const getDots = document.querySelectorAll('span');
 
@@ -48,8 +50,15 @@ function updateDots() {
 }
 
 function autoPlay() {
-  document.querySelector('.next')
   currentIndex = (currentIndex + 1) % imageArray.length;
   container.src = imageArray[currentIndex];
   updateDots();
 }
+
+container.addEventListener('mouseenter', () => {
+  clearInterval(autoPlayInterval);
+})
+
+container.addEventListener('mouseleave', () => {
+  autoPlayInterval = setInterval(autoPlay, 3000);
+})

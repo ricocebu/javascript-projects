@@ -1,6 +1,7 @@
 body {
   padding: 0;
   margin: 0;
+  background-color: #202020;
 }
 
 .carousel-container {
@@ -14,12 +15,29 @@ body {
 }
 
 img {
-  width: 300px;
+  width: 60vw;
+  cursor: pointer;
 }
 
 .buttons {
-  display: inline;
-  margin: 8px;
+  margin: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background-color: #d5d5d5;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #8c8c8c;
+}
+
+.button:hover {
+  background-color: #949494;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #8c8c8c;
+  cursor: pointer;
 }
 
 .dot-style {
@@ -34,4 +52,8 @@ img {
   color: #f8886f;
   font-size: 2em;
   cursor: pointer;
+}
+
+#dots {
+  margin-top: -40px;
 }
