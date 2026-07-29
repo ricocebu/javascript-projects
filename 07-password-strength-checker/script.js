@@ -14,13 +14,11 @@ passwordShow.addEventListener('click', () => {
 })
 
 password.addEventListener('input', () => {
-  if (password.value.length <= 6 ) {
-    passwordResult.textContent = "Password too weak";
-  }  if (password.value.length > 8 && specialChar.test(password.value) && /[A-Z]/.test(password.value)) {
-    passwordResult.textContent = "Secured";
+  if (password.value.length > 8 && specialChar.test(password.value) && /[A-Z]/.test(password.value)) {
+    passwordResult.textContent = "Strong";
   } else if (password.value.length > 6 && specialChar.test(password.value)) {
     passwordResult.textContent = "Medium";
   } else if (password.value.length <= 6 ) {
-    passwordResult.textContent = "Password too weak";
+    passwordResult.textContent = "Weak";
   }  
 })
