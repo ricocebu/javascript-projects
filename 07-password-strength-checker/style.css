@@ -41,7 +41,7 @@ h1 {
 .pass-weak {
   background-color: #ff0000;
   width: 200px;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   padding: 2px;
   text-align: center;
@@ -51,7 +51,7 @@ h1 {
 .pass-medium {
   background-color: #ffff00;
   width: 400px;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   padding: 2px;
   text-align: center;
@@ -61,7 +61,7 @@ h1 {
 .pass-strong {
   background-color: #00ff00;
   width: 614px;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   padding: 2px;
   text-align: center;
@@ -71,7 +71,7 @@ h1 {
 .no-password {
   background-color: #eee;
   width: 614px;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
   padding: 2px;
   text-align: center;
