@@ -8,3 +8,46 @@ img {
   align-items: center;
   gap: 8px;
 }
+
+#input-password {
+  width: 300px;
+  border: 2px solid #333;
+  padding: 4px 8px;
+  border-radius: 4px 4px 0 0;
+}
+
+.pass-weak {
+  background-color: #ff0000;
+  width: 100px;
+  font-size: 12px;
+  margin: 0;
+  padding: 2px;
+  text-align: center;
+}
+
+.pass-medium {
+  background-color: #ffff00;
+  width: 200px;
+  font-size: 12px;
+  margin: 0;
+  padding: 2px;
+  text-align: center;
+}
+
+.pass-strong {
+  background-color: #00ff00;
+  width: 314px;
+  font-size: 12px;
+  margin: 0;
+  padding: 2px;
+  text-align: center;
+}
+
+.no-password {
+  background-color: #eee;
+  width: 314px;
+  font-size: 12px;
+  margin: 0;
+  padding: 2px;
+  text-align: center;
+}
