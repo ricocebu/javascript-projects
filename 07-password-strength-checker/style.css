@@ -1,6 +1,28 @@
+html {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
 img {
   width: 14px;
   cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+h1 {
+  background-color: #00BBFF;
+  width: 100vw;
+  text-align: center;
+  font-size: 60px;
+  padding: 40px 0;
 }
 
 .check-password {
@@ -10,44 +32,48 @@ img {
 }
 
 #input-password {
-  width: 300px;
+  width: 600px;
   border: 2px solid #333;
-  padding: 4px 8px;
+  padding: 10px 8px;
   border-radius: 4px 4px 0 0;
 }
 
 .pass-weak {
   background-color: #ff0000;
-  width: 100px;
-  font-size: 12px;
-  margin: 0;
-  padding: 2px;
-  text-align: center;
-}
-
-.pass-medium {
-  background-color: #ffff00;
   width: 200px;
   font-size: 12px;
   margin: 0;
   padding: 2px;
   text-align: center;
+  margin-left: -22px;
+}
+
+.pass-medium {
+  background-color: #ffff00;
+  width: 400px;
+  font-size: 12px;
+  margin: 0;
+  padding: 2px;
+  text-align: center;
+  margin-left: -22px;
 }
 
 .pass-strong {
   background-color: #00ff00;
-  width: 314px;
+  width: 614px;
   font-size: 12px;
   margin: 0;
   padding: 2px;
   text-align: center;
+  margin-left: -22px;
 }
 
 .no-password {
   background-color: #eee;
-  width: 314px;
+  width: 614px;
   font-size: 12px;
   margin: 0;
   padding: 2px;
   text-align: center;
+  margin-left: -22px;
 }
