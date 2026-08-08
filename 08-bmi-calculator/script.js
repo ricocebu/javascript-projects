@@ -13,6 +13,9 @@ weight.addEventListener('input', () => {
 })
 
 calculate.addEventListener('click', () => {
-  console.log(height + weight);
+  height /= 100;
+  let bmiResult = weight / (height * height);
+  let n = bmiResult.toFixed(1);
+  result.textContent += n + " kg/m\u00B2";
 })
 
