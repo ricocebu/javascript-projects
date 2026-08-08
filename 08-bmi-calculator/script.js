@@ -18,3 +18,9 @@ calculate.addEventListener('click', () => {
   let n = bmiResult.toFixed(1);
   result.textContent += n + " kg/m\u00B2";
 })
+
+reset.addEventListener('click', () => {
+  result.textContent = 'Result: ';
+});
+
+
