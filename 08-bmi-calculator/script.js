@@ -2,7 +2,7 @@ let height = document.getElementById('height');
 let weight = document.getElementById('weight');
 const calculate = document.getElementById('calculate');
 const reset = document.getElementById('reset');
-const result = document.getElementById('result');
+let result = document.getElementById('result');
 
 height.addEventListener('input', () => {
   height = event.target.value;
@@ -18,4 +18,3 @@ calculate.addEventListener('click', () => {
   let n = bmiResult.toFixed(1);
   result.textContent += n + " kg/m\u00B2";
 })
-
