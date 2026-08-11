@@ -12,7 +12,7 @@ calculate.addEventListener('click', () => {
   if (height && weight) {
     result.textContent = 'Result: ' + n + " kg/m\u00B2";
   } else {
-    alert('Please input a valid value!');
+    alert('Error: Please enter a valid height and weight.');
     return;
   }
 
