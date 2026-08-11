@@ -24,3 +24,6 @@ An image carousel with next/previous buttons, dot indicators, and autoplay with 
 
 ### [Password Strength Checker](https://ricocebu.github.io/javascript-projects/07-password-strength-checker/)
 Live password strength feedback showing weak, medium, or strong based on length and character types.
+
+### [BMI Calculator](https://ricocebu.github.io/javascript-projects/08-bmi-calculator/)
+User inputs their height and weight, and the app calculates their BMI and displays the result with a category.
