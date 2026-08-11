@@ -8,7 +8,13 @@ calculate.addEventListener('click', () => {
   const weight = Number(document.getElementById('weight').value);
   let bmiResult = weight / (height * height);
   let n = bmiResult.toFixed(1);
-  result.textContent = 'Result: ' + n + " kg/m\u00B2";
+
+  if (height && weight) {
+    result.textContent = 'Result: ' + n + " kg/m\u00B2";
+  } else {
+    alert('Please input a valid value!');
+    return;
+  }
 
   if (bmiResult >= 30) {
     category.textContent = 'Category: Obese';
