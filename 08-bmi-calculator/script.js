@@ -1,20 +1,11 @@
-let height = document.getElementById('height');
-let weight = document.getElementById('weight');
 const calculate = document.getElementById('calculate');
 const reset = document.getElementById('reset');
-let result = document.getElementById('result');
-let category = document.getElementById('category');
-
-height.addEventListener('input', () => {
-  height = event.target.value;
-})
-
-weight.addEventListener('input', () => {
-  weight = event.target.value;
-})
+const result = document.getElementById('result');
+const category = document.getElementById('category');
 
 calculate.addEventListener('click', () => {
-  height /= 100;
+  const height = Number(document.getElementById('height').value) / 100;
+  const weight = Number(document.getElementById('weight').value);
   let bmiResult = weight / (height * height);
   let n = bmiResult.toFixed(1);
   result.textContent = 'Result: ' + n + " kg/m\u00B2";
@@ -32,6 +23,8 @@ calculate.addEventListener('click', () => {
 })
 
 reset.addEventListener('click', () => {
+  document.getElementById('height').value = '';
+  document.getElementById('weight').value = '';
   result.textContent = 'Result: ';
   category.textContent = 'Category: ';
 });
