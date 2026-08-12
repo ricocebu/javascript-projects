@@ -2,12 +2,14 @@ const calculate = document.getElementById('calculate');
 const reset = document.getElementById('reset');
 const result = document.getElementById('result');
 const category = document.getElementById('category');
+const finalResult = document.querySelector('.result')
 
 calculate.addEventListener('click', () => {
   const height = Number(document.getElementById('height').value) / 100;
   const weight = Number(document.getElementById('weight').value);
   let bmiResult = weight / (height * height);
   let n = bmiResult.toFixed(1);
+  finalResult.classList.add("final-result");
 
   if (height && weight) {
     result.textContent = 'BMI = ' + n + " kg/m\u00B2";
@@ -33,4 +35,5 @@ reset.addEventListener('click', () => {
   document.getElementById('weight').value = '';
   result.textContent = '';
   category.textContent = '';
+  finalResult.classList.remove("final-result");
 });
