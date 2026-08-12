@@ -27,3 +27,6 @@ Live password strength feedback showing weak, medium, or strong based on length 
 
 ### [BMI Calculator](https://ricocebu.github.io/javascript-projects/08-bmi-calculator/)
 User inputs their height and weight, and the app calculates their BMI and displays the result with a category.
+
+### [Stopwatch](https://ricocebu.github.io/javascript-projects/09-stopwatch/)
+A stopwatch with start, stop, and reset functionality, displaying minutes, seconds, and milliseconds.
