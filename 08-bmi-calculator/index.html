@@ -8,13 +8,17 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <section>
+  <section class="container">
     <h1>BMI Calculator</h1>
-    <form>
-      <input id="height" type="number" placeholder="Input Height in cm">
-      <input id="weight" type="number" placeholder="Input Weight in kg">
-      <input type="button" id="calculate" value="Calculate">
-      <input type="reset" id="reset" value="Reset">
+    <form class="form">
+      <label for="height">Height(cm): </label>
+      <input id="height" type="number" placeholder="cm" required>
+      <label for="height">Weight(kg): </label>
+      <input id="weight" type="number" placeholder="kg" required>
+      <div class="button-container">
+        <input class="button" type="button" id="calculate" value="Calculate">
+        <input class="button" type="reset" id="reset" value="Clear">
+      </div>
       <br>
       <span id="result"></span>
       <span id="category"></span>
