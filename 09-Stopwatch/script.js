@@ -5,6 +5,16 @@ const resetbutton = document.getElementById('reset-button');
 const lapButton = document.getElementById('lap-button');
 const lapRecord = document.getElementById('lap-record');
 
-startButton.addEventListener('click', () => {
+let count = 0;
+let interval;
 
-})
+// startButton.addEventListener('click', () => {
+//   start();
+// })
+
+function start() {
+  interval = setInterval(() => {
+    count++;
+    timer.innerHTML = count + 1;
+  }, 10);
+}
