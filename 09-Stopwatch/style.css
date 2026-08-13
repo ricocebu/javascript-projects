@@ -1,0 +1,28 @@
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.stopwatch-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  border: 1px solid red;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 6px 4px;
+
+  button {
+    width: 100px;
+  }
+}
