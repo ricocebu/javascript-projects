@@ -10,6 +10,8 @@ const cardsArray = [
   'images/hearts_K.png',    
 ];
 
+cardsArray.sort(() => Math.random() - .5);
+
 
 cardsArray.forEach(url => {
   const img = document.createElement('img');
