@@ -11,7 +11,10 @@ let interval;
 function startTimer() {
   interval = setInterval(() => {
     count++;
-    timer.innerHTML = count + 1;
+    let ms = count % 100;
+    let seconds = Math.floor(count / 100) % 60;
+    let minutes = Math.floor(count / 6000);
+    timer.innerHTML = minutes + ":" + seconds +":" + ms;
   }, 10);
 }
 
