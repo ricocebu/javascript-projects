@@ -30,7 +30,7 @@ function resetTimer() {
   interval = null;
   count = 0;
   number = 0;
-  timer.innerHTML = "00:00:00";
+  timer.innerHTML = "00 : 00 : 00";
   lapRecord.innerHTML = "";
 }
 
@@ -40,7 +40,7 @@ function recordLap() {
   number++;
 
   const para = document.createElement("p");
-  const node = document.createTextNode("#" + number + " \u2013 " + timerVar());
+  const node = document.createTextNode("#" + number + " \u2014 " + timerVar());
   para.appendChild(node);
   lapRecord.appendChild(para);
 
@@ -50,7 +50,7 @@ function timerVar() {
   let ms = String(count % 100).padStart(2, "0");
   let seconds = String(Math.floor(count / 100) % 60).padStart(2, "0");
   let minutes = String(Math.floor(count / 6000)).padStart(2, "0");
-  return minutes + ":" + seconds +":" + ms;
+  return minutes + " : " + seconds +" : " + ms;
 }
 
 startButton.addEventListener('click', startTimer);
