@@ -36,7 +36,6 @@ function resetTimer() {
 
 function recordLap() {
 
-  timerVar();
   number++;
 
   const para = document.createElement("p");
