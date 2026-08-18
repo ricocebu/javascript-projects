@@ -7,6 +7,7 @@ const lapRecord = document.getElementById('lap-record');
 
 let count = 0;
 let interval;
+let number = 0;
 
 function startTimer() {
 
@@ -14,13 +15,7 @@ function startTimer() {
 
   interval = setInterval(() => {
     count++;
-    let ms = count % 100;
-    let seconds = Math.floor(count / 100) % 60;
-    let minutes = Math.floor(count / 6000);
-    ms = String(ms).padStart(2, "0");
-    seconds = String(seconds).padStart(2, "0");
-    minutes = String(minutes).padStart(2, "0");
-    timer.innerHTML = minutes + ":" + seconds +":" + ms;
+    timer.innerHTML = timerVar();
   }, 10);
 
 }
@@ -34,22 +29,28 @@ function resetTimer() {
   clearInterval(interval);
   interval = null;
   count = 0;
+  number = 0;
   timer.innerHTML = "00:00:00";
   lapRecord.innerHTML = "";
 }
 
 function recordLap() {
-  let ms = count % 100;
-  let seconds = Math.floor(count / 100) % 60;
-  let minutes = Math.floor(count / 6000);
-  ms = String(ms).padStart(2, "0");
-  seconds = String(seconds).padStart(2, "0");
-  minutes = String(minutes).padStart(2, "0");
+
+  timerVar();
+  number++;
 
   const para = document.createElement("p");
-  const node = document.createTextNode(minutes + ":" + seconds +":" + ms);
+  const node = document.createTextNode("#" + number + " \u2013 " + timerVar());
   para.appendChild(node);
   lapRecord.appendChild(para);
+
+}
+
+function timerVar() {
+  let ms = String(count % 100).padStart(2, "0");
+  let seconds = String(Math.floor(count / 100) % 60).padStart(2, "0");
+  let minutes = String(Math.floor(count / 6000)).padStart(2, "0");
+  return minutes + ":" + seconds +":" + ms;
 }
 
 startButton.addEventListener('click', startTimer);
