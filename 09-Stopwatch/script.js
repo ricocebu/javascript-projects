@@ -35,8 +35,24 @@ function resetTimer() {
   interval = null;
   count = 0;
   timer.innerHTML = "00:00:00";
+  lapRecord.innerHTML = "";
+}
+
+function recordLap() {
+  let ms = count % 100;
+  let seconds = Math.floor(count / 100) % 60;
+  let minutes = Math.floor(count / 6000);
+  ms = String(ms).padStart(2, "0");
+  seconds = String(seconds).padStart(2, "0");
+  minutes = String(minutes).padStart(2, "0");
+
+  const para = document.createElement("p");
+  const node = document.createTextNode(minutes + ":" + seconds +":" + ms);
+  para.appendChild(node);
+  lapRecord.appendChild(para);
 }
 
 startButton.addEventListener('click', startTimer);
 stopButton.addEventListener('click', stopTimer);
 resetButton.addEventListener('click', resetTimer);
+lapButton.addEventListener('click', recordLap);
