@@ -25,12 +25,24 @@ cardsArray.forEach(url => {
   const img = document.createElement('img');
   img.src = faceDownCard;
   img.dataset.card = url;
+  img.dataset.hide = "hidden";
   img.alt = 'Card images';
   img.style.width = '100px';
   cardsContainer.appendChild(img);
 
   img.addEventListener('click', () => {
-    img.src = url;
-  })
+    
+    if (img.dataset.hide === "hidden") {
+      img.dataset.hide = "shown";
+      img.src = img.dataset.card;
+    } else if (img.dataset.hide === "shown") {
+      img.dataset.hide = "hidden";
+      img.src = faceDownCard;
+    }
+
+    console.log(img.src);
+    console.log(faceDownCard);
+  });
+
 });
 
