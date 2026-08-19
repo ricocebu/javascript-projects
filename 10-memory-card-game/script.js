@@ -21,11 +21,16 @@ const cardsArray = [
 
 cardsArray.sort(() => Math.random() - .5);
 
-
 cardsArray.forEach(url => {
   const img = document.createElement('img');
-  img.src = url;
+  img.src = faceDownCard;
+  img.dataset.card = url;
   img.alt = 'Card images';
   img.style.width = '100px';
   cardsContainer.appendChild(img);
+
+  img.addEventListener('click', () => {
+    img.src = url;
+  })
 });
+
