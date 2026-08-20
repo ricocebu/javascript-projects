@@ -54,44 +54,20 @@ cardsArray.forEach(url => {
       if (firstCard.dataset.card === secondCard.dataset.card) {
         console.log("MATCH!");
       } else {
-        console.log ("NOT MATCH!");
+        setTimeout( () => {
+          console.log ("NOT MATCH!");
 
-        firstCard.dataset.hide = 'hidden';
-        firstCard.src = faceDownCard;
+          firstCard.dataset.hide = 'hidden';
+          firstCard.src = faceDownCard;
 
-        secondCard.dataset.hide = 'hidden';
-        secondCard.src = faceDownCard;        
+          secondCard.dataset.hide = 'hidden';
+          secondCard.src = faceDownCard;    
+        }, 500)    
       }
 
       selectedCards.length = 0;
 
     }
-
-    // selectedCards.push(img.dataset.card);
-    
-    // if (img.dataset.hide === "hidden" && selectedCards.length <= 2) {
-    //   img.dataset.hide = "shown";
-    //   img.src = img.dataset.card;
-
-    //   if (selectedCards.length === 2) {
-
-    //     img.dataset.hide = "shown";
-    //     img.src = img.dataset.card;
-
-    //     if (selectedCards[0] === selectedCards[1]) {
-    //       img.dataset.hide = "shown";
-    //       img.src = img.dataset.card;
-    //     } else {
-    //       img.dataset.hide = "hidden";
-    //       img.src = faceDownCard;
-    //     }
-    //   } 
-
-    // } else if (img.dataset.hide === "shown") {
-    //   img.dataset.hide = "hidden";
-    //   img.src = faceDownCard;
-    // }
-    // console.log(selectedCards);
 
   });
 
