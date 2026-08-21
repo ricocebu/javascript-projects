@@ -17,4 +17,36 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 8px;
+
+  img {
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  img:hover {
+    transform: scale(1.03);
+  }
+
+}
+
+.info-container {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button {
+    background-color: #F00821;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    transition: .5s;
+  }
+
+  button:hover {
+    transform: scale(1.1);
+  }
+
 }

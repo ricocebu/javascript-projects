@@ -28,7 +28,7 @@ cardsArray.forEach(url => {
   img.dataset.card = url;
   img.dataset.hide = "hidden";
   img.alt = 'Card images';
-  img.style.width = '100px';
+  img.style.width = '80px';
   cardsContainer.appendChild(img);
 
   img.addEventListener('click', () => {
@@ -58,15 +58,11 @@ cardsArray.forEach(url => {
       } else {
         setTimeout( () => {
           console.log ("NOT MATCH!");
-
           firstCard.dataset.hide = 'hidden';
           firstCard.src = faceDownCard;
-
           secondCard.dataset.hide = 'hidden';
           secondCard.src = faceDownCard;   
-          
           selectedCards.length = 0;
-          
         }, 1000)    
       }
 
