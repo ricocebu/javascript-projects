@@ -61,11 +61,12 @@ cardsArray.forEach(url => {
           firstCard.src = faceDownCard;
 
           secondCard.dataset.hide = 'hidden';
-          secondCard.src = faceDownCard;    
-        }, 500)    
+          secondCard.src = faceDownCard;   
+          
+          selectedCards.length = 0;
+          
+        }, 1000)    
       }
-
-      selectedCards.length = 0;
 
     }
 

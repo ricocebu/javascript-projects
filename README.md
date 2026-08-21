@@ -30,3 +30,6 @@ User inputs their height and weight, and the app calculates their BMI and displa
 
 ### [Stopwatch](https://ricocebu.github.io/javascript-projects/09-stopwatch/)
 A stopwatch with start, stop, and reset functionality, displaying minutes, seconds, and milliseconds.
+
+### [Memory Card Game] (https://ricocebu.github.io/javascript-projects/10-memory-card-game/)
+A grid of face-down cards. Click two cards to flip them — if they match they stay flipped, if not they flip back. Game ends when all pairs are matched.
