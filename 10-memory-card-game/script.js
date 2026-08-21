@@ -53,6 +53,8 @@ cardsArray.forEach(url => {
 
       if (firstCard.dataset.card === secondCard.dataset.card) {
         console.log("MATCH!");
+        selectedCards.length = 0;
+
       } else {
         setTimeout( () => {
           console.log ("NOT MATCH!");
