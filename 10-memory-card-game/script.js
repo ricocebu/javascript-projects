@@ -1,5 +1,8 @@
 const cardsContainer = document.getElementById('cards');
 const faceDownCard = 'images/back_light.png';
+const scoreDisplay = document.getElementById('score');
+const restartGame = document.getElementById('restart');
+
 const cardsArray = [
   'images/clubs_A.png',
   'images/clubs_J.png',
@@ -9,6 +12,7 @@ const cardsArray = [
   'images/hearts_J.png',
   'images/hearts_Q.png',
   'images/hearts_K.png',
+
   'images/clubs_A.png',
   'images/clubs_J.png',
   'images/clubs_Q.png',
@@ -18,72 +22,129 @@ const cardsArray = [
   'images/hearts_Q.png',
   'images/hearts_K.png'
 ];
+
 const selectedCards = [];
 let score = 0;
-const restartGame = document.getElementById('restart');
+let checkingCards = false;
 
-cardsArray.sort(() => Math.random() - .5);
 
-cardsArray.forEach(url => {
-  const img = document.createElement('img');
-  img.src = faceDownCard;
-  img.dataset.card = url;
-  img.dataset.hide = "hidden";
-  img.alt = 'Card images';
-  img.style.width = '80px';
-  cardsContainer.appendChild(img);
+function shuffleCards() {
+  cardsArray.sort(() => Math.random() - 0.5);
+}
 
-  img.addEventListener('click', () => {
 
-    if (selectedCards.length >= 2) {
-      return;
-    }
+function createCards() {
+  cardsContainer.innerHTML = '';
 
-    if (img.dataset.hide === 'show') {
-      return;
-    }
+  cardsArray.forEach(url => {
 
-    img.dataset.hide = 'show';
-    img.src = img.dataset.card;
+    const img = document.createElement('img');
 
-    selectedCards.push(img);
+    img.src = faceDownCard;
+    img.dataset.card = url;
+    img.dataset.hide = 'hidden';
+    img.alt = 'Card image';
+    img.style.width = '80px';
 
-    if (selectedCards.length === 2) {
+    cardsContainer.appendChild(img);
 
-      const firstCard = selectedCards[0];
-      const secondCard = selectedCards[1];
+    img.addEventListener('click', () => {
 
-      if (firstCard.dataset.card === secondCard.dataset.card) {
-        score++;
-        document.getElementById('score').innerHTML = "Score: " + score;
-        selectedCards.length = 0;
-
-        if (score === 8) {
-          alert("You win! Congratulations");
-          selectedCards.length = 0;
-        }
-
-      } else {
-        setTimeout( () => {
-          firstCard.dataset.hide = 'hidden';
-          firstCard.src = faceDownCard;
-          secondCard.dataset.hide = 'hidden';
-          secondCard.src = faceDownCard;   
-          selectedCards.length = 0;
-        }, 1000)    
+      // Don't allow clicks while checking two cards
+      if (checkingCards) {
+        return;
       }
 
-    }
+      // Don't allow more than two selected cards
+      if (selectedCards.length >= 2) {
+        return;
+      }
+
+      // Don't allow clicking an already revealed card
+      if (img.dataset.hide === 'show') {
+        return;
+      }
+
+      // Show card
+      img.dataset.hide = 'show';
+      img.src = img.dataset.card;
+
+      // Store the actual image element
+      selectedCards.push(img);
+
+
+      // Wait until two cards have been selected
+      if (selectedCards.length === 2) {
+
+        const firstCard = selectedCards[0];
+        const secondCard = selectedCards[1];
+
+        checkingCards = true;
+
+
+        // MATCH
+        if (firstCard.dataset.card === secondCard.dataset.card) {
+
+          score++;
+
+          scoreDisplay.innerHTML = 'Score: ' + score;
+
+          selectedCards.length = 0;
+
+          checkingCards = false;
+
+
+          // WIN
+          if (score === 8) {
+            setTimeout(() => {
+              alert('You win! Congratulations');
+            }, 300);
+          }
+
+        }
+
+        // NOT MATCH
+        else {
+
+          setTimeout(() => {
+
+            firstCard.dataset.hide = 'hidden';
+            firstCard.src = faceDownCard;
+
+            secondCard.dataset.hide = 'hidden';
+            secondCard.src = faceDownCard;
+
+            selectedCards.length = 0;
+
+            checkingCards = false;
+
+          }, 1000);
+
+        }
+      }
+    });
   });
+}
+
+
+// START GAME
+shuffleCards();
+createCards();
+
+
+// RESTART GAME
+restartGame.addEventListener('click', () => {
+
+  score = 0;
+
+  selectedCards.length = 0;
+
+  checkingCards = false;
+
+  scoreDisplay.innerHTML = 'Score: 0';
+
+  shuffleCards();
+
+  createCards();
 
 });
-
-// restartGame.addEventListener('click', () => {
-//   cardsContainer.getAttribute(img);
-//   img.src = faceDownCard;
-//   img.dataset.hide = "hidden";
-//   selectedCards.length = 0;
-//   score = 0;
-//   document.getElementById('score').innerHTML = "Score: ";
-  
-// });
