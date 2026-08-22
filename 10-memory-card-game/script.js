@@ -118,7 +118,7 @@ function createCards() {
 
             checkingCards = false;
 
-          }, 1000);
+          }, 500);
 
         }
       }
