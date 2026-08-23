@@ -4,7 +4,7 @@ A collection of JavaScript projects built while learning web development.
 
 ## Projects
 
-### [Counter App](https://ricocebu.github.io/javascript-projects/01-counter-app/) *(coming soon)*
+### [Counter App](https://ricocebu.github.io/javascript-projects/01-counter-app/)
 A simple counter with increment, decrement, and reset buttons.
 
 ### [Tip Calculator](https://ricocebu.github.io/javascript-projects/02-tip-calculator/)
