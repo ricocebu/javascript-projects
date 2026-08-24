@@ -7,7 +7,7 @@ let count = 0;
 
 increment.addEventListener('click', () => {
   count++;
-  number.innerHTML = count;
+  number.textContent = count;
 })
 
 decrement.addEventListener('click', () => {
@@ -15,10 +15,10 @@ decrement.addEventListener('click', () => {
     return;
   }
   count--;
-  number.innerHTML = count;
+  number.textContent = count;
 })
 
 reset.addEventListener('click', () => {
   count = 0;
-  number.innerHTML = 0;
+  number.textContent = "0";
 })
