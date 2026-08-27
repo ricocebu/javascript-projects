@@ -1,35 +1,35 @@
 # JavaScript Mini Projects
 
-A collection of JavaScript projects built while learning web development.
+A collection of JavaScript projects built while learning web development — progressing from basic DOM manipulation to API integration.
 
-## Projects
+## Live Projects
 
-### [Counter App](https://ricocebu.github.io/javascript-projects/01-counter-app/)
-A simple counter with increment, decrement, and reset buttons.
+| Project | Description | Demo |
+|--------|-------------|------|
+| Counter App | Increment, decrement, and reset counter with guard clause | [View](https://ricocebu.github.io/javascript-projects/01-counter-app/) |
+| Tip Calculator | Calculates tip and total bill with input validation | [View](https://ricocebu.github.io/javascript-projects/02-tip-calculator/) |
+| Digital Clock | Live 12-hour clock with AM/PM indicator | [View](https://ricocebu.github.io/javascript-projects/03-digital-clock/) |
+| Modal Toggler | Popup modal with overlay and click-outside-to-close | [View](https://ricocebu.github.io/javascript-projects/04-popup-toggler/) |
+| Accordion Widget | FAQ accordion — one open at a time | [View](https://ricocebu.github.io/javascript-projects/05-accordion-widget/) |
+| Image Slider | Carousel with dots, autoplay, and pause on hover | [View](https://ricocebu.github.io/javascript-projects/06-image-slider/) |
+| Password Strength Checker | Live strength feedback based on length and character types | [View](https://ricocebu.github.io/javascript-projects/07-password-strength-checker/) |
+| BMI Calculator | Calculates BMI and displays weight category | [View](https://ricocebu.github.io/javascript-projects/08-bmi-calculator/) |
+| Stopwatch | Start, stop, reset with lap time tracking | [View](https://ricocebu.github.io/javascript-projects/09-stopwatch/) |
+| Memory Card Game | Card matching game with shuffle, score tracking, and win detection | [View](https://ricocebu.github.io/javascript-projects/10-memory-card-game/) |
 
-### [Tip Calculator](https://ricocebu.github.io/javascript-projects/02-tip-calculator/)
-Calculates tip amount and total bill based on bill amount and selected tip percentage.
+## Technologies Used
+- HTML5
+- CSS3
+- Vanilla JavaScript
 
-### [Digital Clock](https://ricocebu.github.io/javascript-projects/03-digital-clock/)
-A live updating 12-hour digital clock with AM/PM indicator.
+## Concepts Covered
+- DOM manipulation and event handling
+- Arrays, loops, and functions
+- setInterval and setTimeout
+- fetch API and async/await
+- classList manipulation
+- localStorage and data attributes
+- API integration (Weather App)
 
-### [Modal Toggler](https://ricocebu.github.io/javascript-projects/04-popup-toggler/)
-A popup modal with overlay, open/close button, and click-outside-to-close functionality.
-
-### [Accordion Widget](https://ricocebu.github.io/javascript-projects/05-accordion-widget/)
-An FAQ accordion where clicking a question expands its answer. Only one open at a time.
-
-### [Image Slider/Carousel](https://ricocebu.github.io/javascript-projects/06-image-slider/)
-An image carousel with next/previous buttons, dot indicators, and autoplay with pause on hover.
-
-### [Password Strength Checker](https://ricocebu.github.io/javascript-projects/07-password-strength-checker/)
-Live password strength feedback showing weak, medium, or strong based on length and character types.
-
-### [BMI Calculator](https://ricocebu.github.io/javascript-projects/08-bmi-calculator/)
-User inputs their height and weight, and the app calculates their BMI and displays the result with a category.
-
-### [Stopwatch](https://ricocebu.github.io/javascript-projects/09-stopwatch/)
-A stopwatch with start, stop, and reset functionality, displaying minutes, seconds, and milliseconds.
-
-### [Memory Card Game](https://ricocebu.github.io/javascript-projects/10-memory-card-game/)
-A grid of face-down cards. Click two cards to flip them — if they match they stay flipped, if not they flip back. Game ends when all pairs are matched.
+## Author
+Rico Niño Cebu — [github.com/ricocebu](https://github.com/ricocebu)
