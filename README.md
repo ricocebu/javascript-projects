@@ -1,6 +1,6 @@
 # JavaScript Mini Projects
 
-A collection of JavaScript projects built while learning web development — progressing from basic DOM manipulation to API integration.
+A collection of JavaScript projects built while learning web development — progressing from basic DOM manipulation to complex state management.
 
 ## Live Projects
 
@@ -26,10 +26,10 @@ A collection of JavaScript projects built while learning web development — pro
 - DOM manipulation and event handling
 - Arrays, loops, and functions
 - setInterval and setTimeout
-- fetch API and async/await
 - classList manipulation
-- localStorage and data attributes
-- API integration (Weather App)
+- Data attributes
+- Event delegation
+- Guard clauses and input validation
 
 ## Author
 Rico Niño Cebu — [github.com/ricocebu](https://github.com/ricocebu)
